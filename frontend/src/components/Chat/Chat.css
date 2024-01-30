@@ -1,0 +1,4 @@
+.chat-component__messages {
+	height: 90%;
+	overflow-y: scroll;
+}
