@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: chat_fastapi_frontend
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: sh -c "npm run start"
+
+  backend:
+    build: ./backend
+    container_name: chat_fastapi_backend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./backend:/app
+      - /app/venv
+    command: sh -c "python src/main.py"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
