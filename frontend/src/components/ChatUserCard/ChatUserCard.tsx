@@ -1,9 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
 import './ChatUserCard.css';
 
 export interface IUser {
 	username: string;
-	online: boolean;
+	online?: boolean;
 }
 
 interface IChatUserCardProps {

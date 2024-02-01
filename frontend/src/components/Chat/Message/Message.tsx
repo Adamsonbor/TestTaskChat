@@ -19,7 +19,7 @@ export interface IMessage {
 export default function Message(props: MessageProps) {
 
 	function parseTimestamp(timestamp: string | undefined) {
-		const time = new Date(timestamp?? Date.now());
+		const time = new Date(timestamp? Number(timestamp) : Date.now())
 		return `${time.getHours()}:${time.getMinutes().toString().padStart(2, '0')}`;
 	}
 

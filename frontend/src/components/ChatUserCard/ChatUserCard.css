@@ -2,6 +2,10 @@
 	transition: all 0.1s ease-out;
 }
 
+.selected {
+	background-color: #f5f5f5;
+}
+
 .chat-user-card:hover {
 	background-color: #f5f5f5;
 	cursor: pointer;

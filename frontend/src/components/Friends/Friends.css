@@ -1,3 +1,7 @@
 .friends__user-card {
 	height: 10vh;
 }
+
+.friends__user-card--selected {
+	background-color: #f0f0f0;
+}
